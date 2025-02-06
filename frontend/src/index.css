@@ -1,0 +1,44 @@
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	min-height: 100vh;
+	height: 100%;
+}
+
+body,
+#root {
+	height: 100%;
+}
+
+.pos-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+}
+
+.main-panel {
+	display: flex;
+	border-radius: 15px;
+	background-color: #332d2d;
+	height: 80%;
+	flex-direction: row;
+	color: #eeeeee;
+}
+
+.chats-menu {
+	width: 30%;
+	max-width: 380px;
+	border-right: 1px solid #eeeeee;
+}
+
+.chat-window {
+	width: 70%;
+}
