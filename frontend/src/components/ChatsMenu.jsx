@@ -1,12 +1,19 @@
 import React from 'react';
 
-import { MDBContainer } from 'mdb-react-ui-kit';
+import Chat from './Chat';
 
-export default function ChatsMenu() {
+import { MDBBtn, MDBIcon } from 'mdb-react-ui-kit';
+
+export default function ChatsMenu({ userChats }) {
 	return (
 		<>
 			<div className='chats-menu'>
-				<p>menu</p>
+				<MDBBtn tag='a' color='none' rippleColor='dark' style={{ color: '#44ad57' }}>
+					<MDBIcon fas icon='plus' size='lg' />
+				</MDBBtn>
+				{userChats.chats.map(chat => (
+					<Chat chat={chat} />
+				))}
 			</div>
 		</>
 	);

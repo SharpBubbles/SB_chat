@@ -5,12 +5,11 @@ import ChatWindow from './ChatWindow';
 
 import { MDBContainer } from 'mdb-react-ui-kit';
 
-export default function MainPanel({ user }) {
-	console.log(user);
+export default function MainPanel({ user, userChats }) {
 	return (
 		<div className='pos-center'>
 			<MDBContainer className='main-panel'>
-				<ChatsMenu />
+				<ChatsMenu userChats={userChats} />
 				<ChatWindow />
 			</MDBContainer>
 		</div>
