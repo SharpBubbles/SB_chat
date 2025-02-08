@@ -21,7 +21,7 @@ export default function Navbar() {
 				<MDBNavbarBrand className='d-flex' href='#'>
 					<img src='/img/SB_chat.png' height='45' style={{ marginTop: 2, marginBottom: 2 }} alt='' />
 				</MDBNavbarBrand>
-				<MDBNavbarLink className='d-flex me-auto' style={{ marginLeft: '10px' }} href='https://github.com/orgs/SharpBubbles/repositories'>
+				<MDBNavbarLink className='d-flex me-auto' style={{ marginLeft: '10px' }} href='https://github.com/SharpBubbles/SB_chat'>
 					<MDBIcon fab icon='github' color='white' size='2x' />
 				</MDBNavbarLink>
 

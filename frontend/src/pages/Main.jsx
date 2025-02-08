@@ -9,15 +9,9 @@ import MainPanel from '../components/MainPanel';
 import { MDBContainer } from 'mdb-react-ui-kit';
 
 export default function Main() {
-	const testUser = { name: 'Коля Халимендик', username: 'kolya_kha', pass: 'user' };
+	const testUser = { name: 'kolya_kha', username: 'kolya_kha', pass: 'user' };
 	const testUserChats = {
 		chats: [
-			{ id: 1, name: 'Острые пузырьки' },
-			{ id: 2, name: 'Крутые парни' },
-			{ id: 1, name: 'Острые пузырьки' },
-			{ id: 2, name: 'Крутые парни' },
-			{ id: 1, name: 'Острые пузырьки' },
-			{ id: 2, name: 'Крутые парни' },
 			{ id: 1, name: 'Острые пузырьки' },
 			{ id: 2, name: 'Крутые парни' },
 		],

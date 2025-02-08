@@ -9,6 +9,7 @@
 
 html {
 	min-height: 100vh;
+
 	height: 100%;
 	min-width: 100vw;
 	width: 100%;
@@ -18,6 +19,13 @@ body,
 #root {
 	height: 100%;
 	width: 100%;
+	max-height: 100vh;
+}
+
+/* Тонкий скролл в Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #888 #332d2d;
 }
 
 .pos-center {
@@ -25,6 +33,8 @@ body,
 	justify-content: center;
 	align-items: center;
 	flex-grow: 1;
+	height: 0%;
+	/* max-height: 90vh; */
 }
 
 .main-panel {
@@ -59,6 +69,7 @@ body,
 	width: 100%;
 	padding: 7.5px 0;
 	border-top: 1px solid #1e1e1e;
+	cursor: pointer;
 }
 
 .chat:last-of-type {
@@ -68,7 +79,6 @@ body,
 .chat-window {
 	display: flex;
 	flex-direction: column;
-	height: 100%;
 	flex-grow: 1;
 	background-image: url(/img/bg.jpg);
 	background-size: cover;
@@ -80,6 +90,8 @@ body,
 	flex-grow: 1; /* Занимает всю доступную высоту */
 	/* background-color: lightblue; */
 	border-top-right-radius: 15px;
+	height: 100%;
+	overflow-y: auto;
 }
 
 .chat-window .bottom {
