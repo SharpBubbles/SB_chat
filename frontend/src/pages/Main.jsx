@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import { loginPage, regPage, apiGetUser, apiGetUserChats } from '../../api-controllers';
+import { loginPage, apiGetUser, apiGetUserChats } from '../../api-controllers';
 
 import Navbar from '../components/Navbar';
 import MainPanel from '../components/MainPanel';
@@ -25,8 +25,9 @@ export default function Main() {
 	const getUser = async () => {
 		try {
 			const response = await axios.get(apiGetUser, { withCredentials: true });
+			console.log(response.data);
 			setUser(response.data);
-			getUserChats(response.data.name);
+			// getUserChats(response.data.name);
 		} catch (error) {
 			console.error('Ошибка загрузки:', error);
 		}
@@ -47,7 +48,7 @@ export default function Main() {
 			// TODO
 		}
 
-		// getUser();
+		getUser();
 	}, []);
 
 	if (user == null || Object.keys(user).length == 0) {
@@ -58,7 +59,7 @@ export default function Main() {
 					<MDBContainer className='main-panel' style={{ flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
 						<h2>Войдите в профиль или зарегистрируйтесь!</h2>
 						<div style={{ flexDirection: 'row' }}>
-							<a href={loginPage}>Войти</a> / <a href={regPage}>Зарегистрироваться</a>
+							<a href={loginPage}>Войти / Зарегистрироваться</a>
 						</div>
 					</MDBContainer>
 				</div>

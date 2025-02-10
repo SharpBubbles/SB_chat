@@ -2,11 +2,12 @@ import React, { useEffect, useState, useRef } from 'react';
 
 import { MDBInputGroup, MDBInput, MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBIcon, MDBBtn, MDBCollapse } from 'mdb-react-ui-kit';
 
-export default function ChatWindow({ username, chatId }) {
+export default function ChatWindow({ username, chatId, msgs }) {
 	const ws = useRef(null);
 	const [status, setStatus] = useState('');
 	let classNameMsg = '';
 
+	// const [messages, setMessages] = useState(msgs);
 	const [messages, setMessages] = useState([
 		{ sender: username, text: 'Привет!', chat_id: chatId },
 		{ sender: 'yunya', text: 'Привет, бро', chat_id: chatId },
